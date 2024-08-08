@@ -26,10 +26,6 @@
 				font-family: 'Font Awesome 5 Brands';
 			}
 		}
-
-		&.style1 {
-		}
-
 		&.style2 {
 			@include vendor('transition', (
 				'background-color #{_duration(transition)} ease-in-out',
