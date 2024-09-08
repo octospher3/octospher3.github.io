@@ -36,10 +36,43 @@
         <div class="container"> 
             <main> 
     <article>
-      <h2>Overview</h2> 
-                    <p> 
-                        
-                    </p> 
+      <h1>APIs: Types and Security Concerns</h1>
+      <p>An API (Application Programming Interface) is a set of protocols and tools that allow one piece of software to communicate with another. APIs are critical in the modern web ecosystem, enabling seamless interaction between applications, services, and platforms.</p>
+
+      <h2>Types of APIs</h2>
+
+      <h3>1. REST (Representational State Transfer) API</h3>
+      <p>REST is one of the most commonly used types of API. It is stateless and uses standard HTTP methods such as GET, POST, PUT, and DELETE to perform operations. REST APIs are flexible and scalable, making them ideal for web services.</p>
+
+      <h3>2. SOAP (Simple Object Access Protocol) API</h3>
+      <p>SOAP is a protocol-based API that uses XML for data exchange. It is more rigid compared to REST but offers higher security features. SOAP APIs are often used in enterprise-level applications where reliability and security are priorities.</p>
+
+      <h3>3. GraphQL API</h3>
+      <p>GraphQL is a query language for APIs that allows clients to request specific data. Unlike REST, which requires multiple endpoints for different resources, GraphQL consolidates requests, making it more efficient and flexible.</p>
+
+      <h3>4. WebSockets API</h3>
+      <p>WebSockets APIs enable real-time, full-duplex communication between clients and servers. It is commonly used for applications that require constant updates, such as live chats and streaming services.</p>
+
+      <h3>5. gRPC (gRemote Procedure Call)</h3>
+      <p>gRPC is an open-source framework that uses HTTP/2 for fast communication between services. It is ideal for microservices and distributed systems, offering low-latency and high-performance API interactions.</p>
+
+      <h2>How to Hack APIs: Ethical Hacking and Security Concerns</h2>
+      <p>API security is a major concern in the modern digital world. Ethical hackers (also known as penetration testers) examine APIs for vulnerabilities to help organizations secure them. Here are common vulnerabilities and how they might be exploited:</p>
+
+      <h3>1. Insecure Endpoints</h3>
+      <p>API endpoints that are not properly secured can be exploited by attackers. Common issues include insufficient authentication, lack of rate limiting, and unprotected sensitive data. Hackers can use tools like <strong>Postman</strong> or <strong>Burp Suite</strong> to explore insecure endpoints.</p>
+
+      <h3>2. Broken Authentication</h3>
+      <p>Weak or broken authentication mechanisms can allow attackers to bypass login protections and gain access to sensitive information. Using automated tools, hackers can perform brute force attacks or session hijacking to exploit these vulnerabilities.</p>
+
+      <h3>3. SQL/NoSQL Injection</h3>
+      <p>If APIs do not properly sanitize user inputs, they are vulnerable to injection attacks. Hackers can manipulate input data to execute arbitrary SQL or NoSQL commands, leading to data breaches or unauthorized access.</p>
+
+      <h3>4. Improper Rate Limiting</h3>
+      <p>Without rate limiting, APIs are vulnerable to denial-of-service (DoS) attacks where an attacker overwhelms the system with requests, causing it to slow down or crash.</p>
+
+      <h3>5. Data Exposure</h3>
+      <p>APIs that expose sensitive data such as user credentials, payment details, or personal information without encryption are at high risk. Attackers can use Man-in-the-Middle (MitM) attacks or API scraping techniques to capture this data.</p>
     </article>
               
             </main> 
