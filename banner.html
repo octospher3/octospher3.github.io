@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>octo</title>
+    <link rel="icon" type="image/x-icon" href="images/unlocked.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/post.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/logo.png" alt="" /></span>
+            <span class="title">Banner Grabbing</span>
+          </a>
+
+          <header> 
+            <h1>Grab it by the banner</h1>
+          </header> 
+        </div>
+      </header>
+
+      <div class="container">
+        <main>
+          <article>
+            <h2>Overview</h2>
+            <p>Banner grabbing is a technique used to collect software, service, and version information from network hosts. It helps both security professionals and attackers identify vulnerabilities in systems.</p>
+
+            <h3>Types of Banner Grabbing</h3>
+            <h4>1. Active Banner Grabbing</h4>
+            <p>Active banner grabbing involves connecting to the server and sending requests to retrieve information, which can trigger security alerts.</p>
+
+            <h4>Telnet</h4>
+            <p>Use <code>Telnet</code> to connect to a server and grab the banner</p>
+            <pre>
+              <code class="command">telnet example.com <target-ip> 80</code>
+                <p>then type HEAD HTTP/ /1.0 to get the banners</p>
+              <code>HEAD/ HTTP/1.0</code>
+            </pre>
+
+            <h4>Nmap</h4>
+            <p>Use <code>Nmap</code> to scan a target for open ports and identify service versions:</p>
+            <pre>
+              <code class="command">nmap -sV example.com <target-ip></code>
+            </pre>
+            <h4>2. Passive Banner Grabbing</h4>
+            <p>Passive banner grabbing collects information without directly interacting with the target system, making it more stealthy.</p>
+
+            <h4>cURL Example</h4>
+            <p>Use <code>cURL</code> to silently retrieve HTTP headers from a target:</p>
+            <pre>
+              <code class="command">curl -s -I example.com<target-ip></code>
+            </pre>
+
+            <h4>Wappalyzer</h4>
+            <p>Install <code>Wappalyzer</code> as a browser extension for Chrome or Firefox to automatically retrieve web technologies and services used by a website.</p>
+          </article>
+
+          <h2>Common Ports Targeted</h2>
+          <p>Banner grabbing typically targets the following ports:</p>
+          <ul>
+            <li>Port 80 (HTTP)</li>
+            <li>Port 21 (FTP)</li>
+            <li>Port 25 (SMTP)</li>
+            <li>Port 22 (SSH)</li>
+            <li>Port 443 (HTTPS)</li>
+            <li>Port 3306 (MySQL)</li>
+          </ul>
+
+          <h2>Preventing Banner Grabbing</h2>
+          <p>To protect against banner grabbing, organizations should:</p>
+          <ul>
+            <li>Hide or modify service banners</li>
+            <li>Disable unnecessary services</li>
+            <li>Implement strict firewall rules</li>
+            <li>Use intrusion detection systems (IDS)</li>
+          </ul>
+        </main>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
